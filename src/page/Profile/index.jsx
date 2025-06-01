@@ -2,7 +2,9 @@
 
 const Prifile = () => {
 	return (
-		<div>Prifile</div>
+		<div>
+				
+		</div>
 	)
 }
 
