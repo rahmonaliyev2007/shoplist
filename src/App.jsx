@@ -4,6 +4,7 @@ import AuthLayout from './layout/auth'
 import DashboardLayout from './layout/dashboard'
 import Prifile from './page/Profile'
 import { useTheme } from './store/useThem'
+import Group from './layout/dashboard/group'
 
 function App() {
 	const init = useTheme(state => state.init)
@@ -25,7 +26,7 @@ function App() {
 				{/* <Route element={<PrivateRoute />}> */}
 				<Route element={<DashboardLayout />}>
 					<Route path='/profile' element={<Prifile />} />
-					<Route path='/group/:groupId' element={''} />
+					<Route path='/group/:groupId' element={<Group/>} />
 				</Route>
 				{/* </Route> */}
 			</Routes>
