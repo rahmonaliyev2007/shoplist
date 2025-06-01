@@ -9,7 +9,7 @@ const getGroups = () => {
         queryFn: () =>
             axios
                 .get(`${API}/groups`, { headers:{"x-auth-token": localStorage.getItem('token') || ''}})
-                .then(res => res?.data?.data ?? []),
+                .then(res => res?.data ?? []),
     })
 
     return { data, isLoading, isFetching, isError }
