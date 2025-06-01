@@ -1,7 +1,7 @@
 const Prifile = () => {
 	return (
 		<div>
-			<h1>Profile</h1>
+				<h2 className='z-50 relative'>hello</h2>
 		</div>
 	)
 }
