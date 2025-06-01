@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 .active{
-	
+	background-color: #a78bfa !important; 
+	border-radius: 6px;	
 }

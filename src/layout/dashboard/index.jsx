@@ -1,5 +1,5 @@
 
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router-dom'
 import HeaderTop from '../../components/header/headerTop'
 import HeaderNav from '../../components/header/headerLeft'
 
