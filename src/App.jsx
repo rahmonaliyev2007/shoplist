@@ -16,16 +16,16 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				{/* <Route element={<PublicRoute />}> */}
-				<Route element={<AuthLayout />}>
-					<Route index path='/login' />
-					<Route path='/register' />
+				<Route path='/' element={<AuthLayout />}>
+					<Route index path='/login' element={''} />
+					<Route path='/register' element={''} />
 				</Route>
 				{/* </Route> */}
 
 				{/* <Route element={<PrivateRoute />}> */}
-				<Route  element={<DashboardLayout />}>
+				<Route element={<DashboardLayout />}>
 					<Route path='/profile' element={<Prifile />} />
-					<Route path='/group/:groupId' />
+					<Route path='/group/:groupId' element={''} />
 				</Route>
 				{/* </Route> */}
 			</Routes>
