@@ -6,7 +6,7 @@ import HeaderNav from '../../components/header/headerLeft'
 
 const DashboardLayout= () => {
 	return (
-		<div className='overflow-hidden'>
+		<div className='overflow-hidden '>
 			<div className="w-full">
 				<HeaderTop/>
 			</div>
