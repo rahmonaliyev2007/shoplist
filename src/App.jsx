@@ -2,20 +2,20 @@
 import { useEffect } from 'react'
 import './App.css'
 import { Home } from 'lucide-react'
-import toast from 'react-hot-toast'
+import useSearchUser from './service/searchUsers';
 
 function App() {
 
-  const handle =()=>{
-  toast.success('Ishladi')
-
-  }
+  const {data:groups} = useSearchUser('ali', 'users');
+  console.log(groups);
+  
 
   useEffect(()=>{
   },[])
   return (
    <div className=' text-red-500'>Slaom <Home/>
-   <button onClick={handle}>Click</button> </div>
+   {/* <button onClick={handle}>Click</button>  */}
+   </div>
   )
 }
 
