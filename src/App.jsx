@@ -1,21 +1,25 @@
 
 import { useEffect } from 'react'
 import './App.css'
-import { Home } from 'lucide-react'
+import { Home, Route } from 'lucide-react'
 import useSearchUser from './service/searchUsers';
+import { BrowserRouter, Routes } from 'react-router';
 
 function App() {
 
-  const {data:groups} = useSearchUser('ali', 'users');
-  console.log(groups);
-  
-
-  useEffect(()=>{
-  },[])
   return (
-   <div className=' text-red-500'>Slaom <Home/>
-   {/* <button onClick={handle}>Click</button>  */}
-   </div>
+   <BrowserRouter>
+    <Routes>
+      <Route path='/' >
+        <Route index path='/login'/>
+        <Route path='/register'/>
+      </Route>
+      <Route path='/dashboard'>
+        <Route path='/profile'/>
+        <Route path='/group/:groupId'/>
+      </Route>
+    </Routes>
+   </BrowserRouter>
   )
 }
 
