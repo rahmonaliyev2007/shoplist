@@ -6,6 +6,8 @@ import PublicRoute from './hooks/PublicRoute'
 import { useTheme } from './store/useThem'
 import { useEffect } from 'react'
 import AuthLayout from './layout/auth'
+import Prifile from './page/Profile'
+import DashboardLayout from './layout/dashboard'
 
 function App() {
 
@@ -13,12 +15,8 @@ function App() {
 
 	useEffect(() => {
     init(); 
-  }, []);
+  },[]);
 	
-
-	
-
-
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -31,8 +29,8 @@ function App() {
 				
 
 				{/* <Route element={<PrivateRoute />}> */}
-					<Route path='/dashboard'>
-						<Route path='/profile' />
+					<Route path='/dashboard' element={<DashboardLayout/>}>
+						<Route path='/profile' element={<Prifile/>} />
 						<Route path='/group/:groupId' />
 					</Route>
 				{/* </Route> */}
