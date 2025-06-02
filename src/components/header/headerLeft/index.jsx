@@ -5,21 +5,16 @@ import { useNavStore } from '../../../store/useNavigate'
 import CreateGroupModal from '../../creatGroupModal'
 
 import getGroups from '../../../service/getGroups'
-import { useGetGroupeData } from '../../../store/setGroup'
+
 
 const HeaderNav = () => {
 	const { isNav } = useNavStore()
 	const [isOpen, setIsOpen] = useState(true)
 	const { data: groups, isLoading } = getGroups()
 
-	localStorage.setItem(
-		'token',
-		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODNjMjZhNzgxZDFjNmEwMWE0ODFjZjgiLCJpYXQiOjE3NDg3ODMwODl9.JMEjsv_1lMg24IEFgd3P72N4GFilISEM1H-J8wZtTRw'
-	)
-
 	const [isModalOpen, setIsModalOpen] = useState(false)
-	const { user } = useGetGroupeData()
-	console.log(user)
+	
+
 
 	return (
 		<nav
@@ -130,7 +125,7 @@ const HeaderNav = () => {
 											`
 											flex hover:text-violet-400 duration-300 gap-2 px-3 dark:text-white
 											dark:hover:bg-violet-400 py-2 w-full shadow-lg dark:bg-gray-800
-											bg-gray-100 rounded-md dark:shadow-dark text-center hover:bg-gray-200 transition
+											bg-gray-100 rounded-md  justify-center md:justify-start dark:shadow-dark text-center hover:bg-gray-200 transition
 											${isNav ? 'md:text-center' : 'md:text-start'}
 											${
 												isActive
@@ -140,7 +135,7 @@ const HeaderNav = () => {
 										`
 										}
 									>
-										<h2 className='uppercase md:hidden'>{group.name[0]}</h2>
+										<h2 className='uppercase text-center  md:hidden'>{group.name[0]}</h2>
 
 										{isNav ? (
 											<h2 className='uppercase hidden md:block'>
