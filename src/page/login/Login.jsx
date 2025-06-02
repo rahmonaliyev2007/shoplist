@@ -22,11 +22,11 @@ const Login = () => {
     if (response.status >= 200 && response.status < 400) {
       await setToken(response?.data?.token);
       await setUser(response?.data?.user);
-
+toast.success("Succesfully!")
       navigate("/profile");
     }
     else{
-      toast.error("Bad Request!❌")
+      toast.error("Bad Request!")
     }
     return response?.data;
   };
