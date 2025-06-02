@@ -6,6 +6,7 @@ import { useAuthStore } from "../../store/useToken";
 import { useUserStore } from "../../store/useUser";
 
 const Register = () => {
+  
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

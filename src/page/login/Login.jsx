@@ -31,7 +31,7 @@ toast.success("Succesfully!")
     return response?.data;
   };
 
-  return (
+  return ( 
     <div className="mx-auto dark:text-[white] p-[50px] max-md:p-6 max-sm:p-4 content-center min-h-[100vh]">
       <div className="max-w-[1200px] bg-[#F9FAFB] mx-auto rounded-[25px] overflow-hidden dark:shadow-dark  shadow-lg flex items-center content-center min-h-[450px] max-md:flex-col">
         <div className="w-[50%] max-md:w-[100%]  bg-[#212529] min-h-[450px] h-full px-[50px] pt-[30px] pb-[50px]">

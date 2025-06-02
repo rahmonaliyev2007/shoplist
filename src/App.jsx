@@ -21,6 +21,7 @@ function App() {
 				{/* <Route element={<PublicRoute />}> */}
 				<Route element={<AuthLayout />}>
 					<Route  path='/' element={<Login />} />
+		
 					<Route path='/register' element={<Register />} />
 				</Route>
 				{/* </Route> */}
