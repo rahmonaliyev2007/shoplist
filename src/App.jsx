@@ -17,9 +17,10 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				{/* <Route element={<PublicRoute />}> */}
-				<Route path='/' element={<AuthLayout />}>
-					<Route index path='/login' element={''} />
-					<Route path='/register' element={''} />
+				<Route element={<AuthLayout />}>
+					<Route  path='/' element={<Login />} />
+		
+					<Route path='/register' element={<Register />} />
 				</Route>
 				{/* </Route> */}
 
