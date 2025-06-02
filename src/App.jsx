@@ -5,8 +5,6 @@ import DashboardLayout from './layout/dashboard'
 import Group from './layout/dashboard/group'
 import Prifile from './page/Profile'
 import { useTheme } from './store/useThem'
-import Login from './page/login/Login'
-import Register from './page/register/Register'
 
 function App() {
 	const init = useTheme(state => state.init)
