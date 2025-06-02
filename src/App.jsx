@@ -5,6 +5,8 @@ import DashboardLayout from './layout/dashboard'
 import Group from './layout/dashboard/group'
 import Prifile from './page/Profile'
 import { useTheme } from './store/useThem'
+import Login from './page/login/Login'
+import Register from './page/register/Register'
 
 function App() {
 	const init = useTheme(state => state.init)
@@ -17,9 +19,9 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				{/* <Route element={<PublicRoute />}> */}
-				<Route path='/' element={<AuthLayout />}>
-					<Route index path='/login' element={''} />
-					<Route path='/register' element={''} />
+				<Route element={<AuthLayout />}>
+					<Route  path='/' element={<Login />} />
+					<Route path='/register' element={<Register />} />
 				</Route>
 				{/* </Route> */}
 
