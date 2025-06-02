@@ -4,6 +4,7 @@ import axios from "axios";
 import { API } from "../../hooks/getEnv";
 import { useAuthStore } from "../../store/useToken";
 import { useUserStore } from "../../store/useUser";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -24,9 +25,11 @@ const Login = () => {
 
       navigate("/profile");
     }
+    else{
+      toast.error("Bad Request!❌")
+    }
     return response?.data;
   };
-
 
   return (
     <div className="mx-auto dark:text-[white] p-[50px] max-md:p-6 max-sm:p-4 content-center min-h-[100vh]">
@@ -48,7 +51,7 @@ const Login = () => {
         </div>
         <div className="w-[50%] max-md:w-[100%] bg-[#F9FAFB] min-h-[450px] h-full p-[50px] max-md:p-10 max-sm:px-4">
           <form action="" onSubmit={onSubmit}>
-            <h2 className="text-[30px] text-violet-700 text-center font-semibold">
+            <h2 className="relative text-[30px] text-violet-700 w-[100px] mx-auto text-center font-semibold before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-[100px] before:bg-violet-700 before:scale-0 hover:before:scale-100  before:duration-300 cursor-pointer">
               Sign In
             </h2>
             <div className="flex flex-col gap-2 mt-3">

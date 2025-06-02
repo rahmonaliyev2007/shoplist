@@ -33,8 +33,8 @@ const Register = () => {
 
   return (
     <div className="mx-auto dark:text-[white] p-[50px] max-md:p-6 max-sm:p-4 content-center min-h-[100vh]">
-      <div className="max-w-[1200px] bg-[#F9FAFB] mx-auto rounded-[25px] overflow-hidden dark:shadow-dark  shadow-lg flex items-center content-center min-h-[450px] max-md:flex-col">
-        <div className="w-[50%] max-md:w-[100%]  bg-[#212529] min-h-[450px] h-full px-[50px] pt-[30px] pb-[50px]">
+      <div className="max-w-[1200px] bg-[#F9FAFB] mx-auto rounded-[25px] overflow-hidden dark:shadow-dark  shadow-lg flex items-center content-center min-h-[500px] max-md:flex-col">
+        <div className="w-[50%] max-md:w-[100%]  bg-[#212529] min-h-[500px] max-md:min-h-[420px] h-full px-[50px] pt-[30px] pb-[50px]">
           <div className="h-[150px] w-[140px] overflow-hidden mx-auto">
             <img
               src="./logo.png"
@@ -51,7 +51,7 @@ const Register = () => {
         </div>
         <div className="w-[50%] max-md:w-[100%] bg-[#F9FAFB] min-h-[450px] h-full p-[50px] max-md:p-10 max-sm:px-4">
           <form action="" onSubmit={onSubmit}>
-            <h2 className="relative text-[30px] text-violet-700 text-center font-semibold">
+            <h2 className="relative text-[30px] text-violet-700 w-[120px] mx-auto text-center font-semibold before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-[120px] before:bg-violet-700 before:scale-0 hover:before:scale-100  before:duration-300 cursor-pointer">
               Register
             </h2>
              <div className="flex flex-col gap-2 mt-3">
@@ -110,12 +110,12 @@ const Register = () => {
             </button>
           </form>
           <p>
-            No accaunt yet?{" "}
+            Already have an account?{" "}
             <Link
-              to="/register"
+              to="/"
               className="text-violet-700 underline cursor-pointer duration-300 hover:text-[#005fee]"
             >
-              Create One
+              Log In
             </Link>
           </p>
         </div>
