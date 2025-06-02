@@ -11,6 +11,7 @@ export const useUserStore = create(
       clearUser: () => set({ user: null }),
     }),
     {
+      
       name: 'user-storage',
     }
   )
