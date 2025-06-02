@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AuthLayout from './layout/auth'
 import DashboardLayout from './layout/dashboard'
+import Group from './layout/dashboard/group'
 import Prifile from './page/Profile'
 import { useTheme } from './store/useThem'
-import Group from './layout/dashboard/group'
 
 function App() {
 	const init = useTheme(state => state.init)
@@ -26,7 +26,7 @@ function App() {
 				{/* <Route element={<PrivateRoute />}> */}
 				<Route element={<DashboardLayout />}>
 					<Route path='/profile' element={<Prifile />} />
-					<Route path='/group/:groupId' element={<Group/>} />
+					<Route path='/group/:groupId' element={<Group />} />
 				</Route>
 				{/* </Route> */}
 			</Routes>
