@@ -8,10 +8,10 @@ const HeaderTop = () => {
 	const { toggleIsNav } = useNavStore()
 	const { isDark, toggleTheme } = useTheme()
 	const navigate = useNavigate()
-	const {clearToken} = useAuthStore()
-	const logOut = async () =>{
+	const { clearToken } = useAuthStore()
+	const logOut = async () => {
 		await clearToken()
-		navigate("/login")
+		navigate('/')
 	}
 
 	return (
@@ -71,7 +71,10 @@ const HeaderTop = () => {
 				<div className='text-gray-700  dark:hover:bg-violet-400 p-[5px] hover:bg-gray-200 rounded-[6px] duration-300 '>
 					<Bell className='fill-gray-700 dark:fill-white dark:text-white' />
 				</div>
-				<div className='text-gray-700 dark:hover:bg-violet-400 p-[5px] hover:bg-gray-200 rounded-[6px] duration-300 ' onClick={logOut}>
+				<div
+					className='text-gray-700 dark:hover:bg-violet-400 p-[5px] hover:bg-gray-200 rounded-[6px] duration-300 '
+					onClick={logOut}
+				>
 					<LogOut className='  dark:text-white' />
 				</div>
 			</div>

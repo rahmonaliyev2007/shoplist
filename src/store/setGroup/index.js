@@ -2,14 +2,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 
-export const useUserStore = create(
+export const useGetGroupeData = create(
   persist(
     (set) => ({
-      user: null,
+      group: null,
 
-      setUser: (userData) => set({ user: userData }),
+      setGroup: (userData) => set({ user: userData }),
 
-      clearUser: () => set({ user: null }),
+      clearGroup: () => set({ user: null }),
     }),
     {
       name: 'user-storage',
